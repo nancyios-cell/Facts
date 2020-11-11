@@ -2,23 +2,29 @@
 //  ContentView.swift
 //  Facts
 //
-//  Created by Nancy on 10/11/20.
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    @ObservedObject var viewModel = FactsListViewModel()
+
     var body: some View {
-            List(0..<5) { item in
+        NavigationView{
+            List(viewModel.factList.rows ?? [Facts]()) { object in
                 Image("ic_img")
+                    .cornerRadius(10.0)
                 VStack(alignment: .leading, spacing: 2.0) {
-                    Text("BeaversBeaversBeaversBeavers")
+                    Text("\(object.title ?? "empty")")
                         .font(.title2)
-                    Text("Eare illegal. Cats are fineEare illegal. Cats are fineEare illegal. Cats are fineEare illegal. Cats are fine")
+                    Text("\(object.description ?? "empty")")
                         .font(.subheadline)
                         .foregroundColor(Color(red: 86.0/225.0, green: 86.0/225.0, blue: 86.0/225.0, opacity: 1.0))
                 }
-            }
+            }.navigationBarTitle("\(viewModel.factList.title ?? "Facts")")
+            .onAppear {self.viewModel.getFactsList()}
+        }
     }
 }
 
@@ -27,6 +33,5 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             ContentView()
         }
-            
     }
 }
