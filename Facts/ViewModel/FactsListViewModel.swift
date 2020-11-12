@@ -11,16 +11,12 @@ import SwiftUI
 import Combine
 
 class FactsListViewModel: ObservableObject {
-   // let didChange = PassthroughSubject<FactsListViewModel, Never>()
-    
-    
+    /*
+     @Published is used to announce when cahnges occuer in Observable Object
+     */
     @Published var factList = FactsModel(title: "", rows: [])
-    /*{
-        didSet {
-            didChange.send(self)
-        }
-    } */
     
+    //MARK: - Call API -
      func getFactsList() {
             WebServices().getFactsList { (success, list) in
                 if success {
