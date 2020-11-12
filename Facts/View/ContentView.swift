@@ -14,7 +14,6 @@ struct ContentView: View {
      */
 
     @ObservedObject var viewModel = FactsListViewModel()
-    @State private var shouldAnimate = false
     
     var body: some View {
         NavigationView{
