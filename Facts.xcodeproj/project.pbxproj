@@ -21,6 +21,7 @@
 		18355389255AF0EC00C965B2 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18355388255AF0EC00C965B2 /* FactsListViewModel.swift */; };
 		1888441F255C384100FDE1A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888441E255C384100FDE1A1 /* ContentView.swift */; };
 		18D11810255C46DF00DA631A /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1180F255C46DF00DA631A /* NetworkImage.swift */; };
+		18F09D20255D0655009185F0 /* Facts.json in Resources */ = {isa = PBXBuildFile; fileRef = 18F09D1F255D0655009185F0 /* Facts.json */; };
 		8DD03D1D4B89F277AACBFB96 /* Pods_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF6DAF9D73A0B9DD45F192E /* Pods_Facts.framework */; };
 		9536D6BAD7C9E88F4A0E8F3F /* Pods_FactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179F4CB4C43C7743E7D35533 /* Pods_FactsTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		18355388255AF0EC00C965B2 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
 		1888441E255C384100FDE1A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18D1180F255C46DF00DA631A /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
+		18F09D1F255D0655009185F0 /* Facts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Facts.json; sourceTree = "<group>"; };
 		2B8CB88FEDF5687D25DC5824 /* Pods-Facts-FactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facts-FactsUITests.release.xcconfig"; path = "Target Support Files/Pods-Facts-FactsUITests/Pods-Facts-FactsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2ED7C4968819AFDFF2D4E816 /* Pods-Facts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facts.release.xcconfig"; path = "Target Support Files/Pods-Facts/Pods-Facts.release.xcconfig"; sourceTree = "<group>"; };
 		74662F86733E098162CC74CC /* Pods-Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facts.debug.xcconfig"; path = "Target Support Files/Pods-Facts/Pods-Facts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				181A4844255A6CD30014CBE7 /* FactsTests.swift */,
 				181A4846255A6CD30014CBE7 /* Info.plist */,
+				18F09D1F255D0655009185F0 /* Facts.json */,
 			);
 			path = FactsTests;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F09D20255D0655009185F0 /* Facts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
