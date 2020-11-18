@@ -34,10 +34,8 @@ class FactsUITests: XCTestCase {
         app.launch()
         
         // To check Navigation title
-        let navTitleIdentifier = "About Canada"
-        let navigationTitleElement = app.navigationBars.matching(identifier: navTitleIdentifier).firstMatch
-        XCTAssert(navigationTitleElement.exists)
-
+          XCTAssert(app.navigationBars["About Canada"].exists)
+        
         // To show UTableView Cells
         XCUIApplication().tables.element.swipeUp()
         let count = XCUIApplication().tables.element.children(matching: .cell).count
@@ -49,9 +47,9 @@ class FactsUITests: XCTestCase {
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
+            /*measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
-            }
+            }*/
         }
     }
 }
