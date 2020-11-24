@@ -1,16 +1,20 @@
 PODS:
-  - Kingfisher (4.10.1)
+  - Introspect (0.1.1)
+  - SwiftUIRefresh (0.0.3):
+    - Introspect (~> 0.1.0)
 
 DEPENDENCIES:
-  - Kingfisher (~> 4.10.0)
+  - SwiftUIRefresh
 
 SPEC REPOS:
   trunk:
-    - Kingfisher
+    - Introspect
+    - SwiftUIRefresh
 
 SPEC CHECKSUMS:
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Introspect: 50c17d6b1f091f4cfd678ea8a4157ac071808fe3
+  SwiftUIRefresh: ca6ae2718d25aad5dd68bbf5d2ae36ef6ade98bf
 
-PODFILE CHECKSUM: 27cbb59ac2c4090f6639db4d07c8d5026f90b457
+PODFILE CHECKSUM: 1303d25402b5ab0589488c35e56196060eebe536
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

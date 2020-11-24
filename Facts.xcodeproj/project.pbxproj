@@ -18,8 +18,9 @@
 		1835537A255AE17C00C965B2 /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18355379255AE17C00C965B2 /* FactsModel.swift */; };
 		1835537F255AEB3900C965B2 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835537E255AEB3900C965B2 /* CheckInternet.swift */; };
 		18355389255AF0EC00C965B2 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18355388255AF0EC00C965B2 /* FactsListViewModel.swift */; };
+		183C84C4256D2F7500B36139 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C84C3256D2F7500B36139 /* UrlImageView.swift */; };
+		183C84C6256D2FDE00B36139 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C84C5256D2FDE00B36139 /* UrlImageModel.swift */; };
 		1888441F255C384100FDE1A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888441E255C384100FDE1A1 /* ContentView.swift */; };
-		18D11810255C46DF00DA631A /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1180F255C46DF00DA631A /* NetworkImage.swift */; };
 		18F09D20255D0655009185F0 /* Facts.json in Resources */ = {isa = PBXBuildFile; fileRef = 18F09D1F255D0655009185F0 /* Facts.json */; };
 		18F3EE5A2565693300F4B997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A482D255A6CCE0014CBE7 /* AppDelegate.swift */; };
 		8DD03D1D4B89F277AACBFB96 /* Pods_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF6DAF9D73A0B9DD45F192E /* Pods_Facts.framework */; };
@@ -64,8 +65,9 @@
 		18355379255AE17C00C965B2 /* FactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsModel.swift; sourceTree = "<group>"; };
 		1835537E255AEB3900C965B2 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		18355388255AF0EC00C965B2 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
+		183C84C3256D2F7500B36139 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
+		183C84C5256D2FDE00B36139 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
 		1888441E255C384100FDE1A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		18D1180F255C46DF00DA631A /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		18F09D1F255D0655009185F0 /* Facts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Facts.json; sourceTree = "<group>"; };
 		2B8CB88FEDF5687D25DC5824 /* Pods-Facts-FactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facts-FactsUITests.release.xcconfig"; path = "Target Support Files/Pods-Facts-FactsUITests/Pods-Facts-FactsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2ED7C4968819AFDFF2D4E816 /* Pods-Facts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facts.release.xcconfig"; path = "Target Support Files/Pods-Facts/Pods-Facts.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				18355379255AE17C00C965B2 /* FactsModel.swift */,
+				183C84C5256D2FDE00B36139 /* UrlImageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				1888441E255C384100FDE1A1 /* ContentView.swift */,
-				18D1180F255C46DF00DA631A /* NetworkImage.swift */,
+				183C84C3256D2F7500B36139 /* UrlImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -467,7 +470,8 @@
 			files = (
 				18F3EE5A2565693300F4B997 /* AppDelegate.swift in Sources */,
 				1835537F255AEB3900C965B2 /* CheckInternet.swift in Sources */,
-				18D11810255C46DF00DA631A /* NetworkImage.swift in Sources */,
+				183C84C4256D2F7500B36139 /* UrlImageView.swift in Sources */,
+				183C84C6256D2FDE00B36139 /* UrlImageModel.swift in Sources */,
 				1888441F255C384100FDE1A1 /* ContentView.swift in Sources */,
 				181A4830255A6CCE0014CBE7 /* SceneDelegate.swift in Sources */,
 				18355389255AF0EC00C965B2 /* FactsListViewModel.swift in Sources */,

@@ -56,7 +56,7 @@ class WebServices
                             decoder.keyDecodingStrategy = .convertFromSnakeCase
                             
                             let decodedCountries = try decoder.decode(FactsModel.self, from: jsonDD)
-                            //print(decodedCountries.rows)
+                            print(decodedCountries.rows)
                             completionHandler(true, decodedCountries)
                         }
                     }

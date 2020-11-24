@@ -15,16 +15,24 @@ class FactsListViewModel: ObservableObject {
      @Published is used to announce when cahnges occuer in Observable Object
      */
     @Published var factList = FactsModel(title: "", rows: [])
+    @Published var shouldShowAlert: Bool = false
     
     //MARK: - Call API -
-     func getFactsList() {
+     func getFactsList()
+     {
             WebServices().getFactsList { (success, list) in
                 if success {
                     if let list = list {
                         DispatchQueue.main.async {
                             self.factList = list
+                            self.shouldShowAlert = false
                         }
-                    } else {return}
+                    } else {
+                        self.shouldShowAlert = true
+                       // return
+                    }
+                } else {
+                    self.shouldShowAlert = true
                 }
             }
         }

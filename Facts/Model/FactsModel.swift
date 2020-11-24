@@ -20,7 +20,6 @@ struct FactsModel:Hashable, Codable ,Identifiable{
         case title
         case rows 
     }
-
 }
 
 struct Facts: Hashable,Codable,Identifiable {
