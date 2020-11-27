@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var image = Image("ic_img")
     @State private var isShowing = false
     
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -33,37 +34,45 @@ struct ContentView: View {
                         }
                         VStack(alignment: .leading, spacing: 8.0) {
                             Text("\(object.title ?? "")")
-                                .font(.custom("Avenir - Medium", size: 18))
+                                .font(.custom(Constants.Fonts.appFontMedium, size: 18))
                                 .lineSpacing(5.0)
                             Text("\(object.description ?? "")")
-                                .font(.custom("Avenir", size: 15))
+                                .font(.custom(Constants.Fonts.appFontRegular, size: 15))
                                 .foregroundColor(Color(red: 86.0/225.0, green: 86.0/225.0, blue: 86.0/225.0, opacity: 1.0))
                         }
                     }
-                    .accessibility(identifier: "tableView")
-                    .pullToRefresh(isShowing: $isShowing) {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            self.isShowing = false
-                            self.viewModel.getFactsList()
-                        }
-                    }
+                    .accessibility(identifier: Constants.Identifier.appFontMedium)
                     Spacer()
                 } else {
-                    Text("No Data Available")
+                        Text(self.viewModel.alertMessage)
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
-            .navigationBarTitle("\(viewModel.factList.title ?? "Facts")")
+            .navigationBarTitle("\(viewModel.factList.title ?? Constants.appName)")
             .onAppear(perform: {
                 UITableView.appearance().showsVerticalScrollIndicator = false
-                self.viewModel.getFactsList() })
+                self.viewModel.getFactsList()
+            })
                 .alert(isPresented: $viewModel.shouldShowAlert, content: { () -> Alert in
-                    Alert.init(title: Text("Please check your connection and try again.")) })
+                    Alert(title: Text(Constants.appName), message: Text(self.viewModel.alertMessage), dismissButton: .default(Text(Constants.okTitle), action: {
+                        return
+                    }))
+                })
+        }
+        .pullToRefresh(isShowing: $isShowing) {
+            self.callAPIInRefresh()
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .font(.custom("Avenir - Medium", size: 22))
+        .font(.custom(Constants.Fonts.appFontMedium, size: CGFloat(Constants.Fonts.appFontMediumSize)))
     }
     
+    
+    func callAPIInRefresh() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.isShowing = false
+            self.viewModel.getFactsList()
+        }
+    }
     
 }
 

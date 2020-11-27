@@ -16,11 +16,15 @@ class FactsListViewModel: ObservableObject {
      */
     @Published var factList = FactsModel(title: "", rows: [])
     @Published var shouldShowAlert: Bool = false
+    @Published var alertMessage = ""
     
     //MARK: - Call API -
      func getFactsList()
      {
-            WebServices().getFactsList { (success, list) in
+            WebServices().getFactsList { (success, list, message) in
+                DispatchQueue.main.async {
+                 self.factList = FactsModel(title: "", rows: [])
+                }
                 if success {
                     if let list = list {
                         DispatchQueue.main.async {
@@ -29,10 +33,12 @@ class FactsListViewModel: ObservableObject {
                         }
                     } else {
                         self.shouldShowAlert = true
-                       // return
                     }
                 } else {
                     self.shouldShowAlert = true
+                }
+                DispatchQueue.main.async {
+                    self.alertMessage = message ?? ""
                 }
             }
         }

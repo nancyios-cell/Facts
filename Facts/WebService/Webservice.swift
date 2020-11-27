@@ -29,7 +29,7 @@ class WebServices
         }
     }
     
-    func getFactsList(completionHandler:@escaping (_ success:Bool, _ factResponse:FactsModel?) -> Void) {
+    func getFactsList(completionHandler:@escaping (_ success:Bool, _ factResponse:FactsModel?, _ message: String?) -> Void) {
         if checkInternet() {
             var mainUrl = ""
             mainUrl = "\(BASE_URL)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -56,17 +56,16 @@ class WebServices
                             decoder.keyDecodingStrategy = .convertFromSnakeCase
                             
                             let decodedCountries = try decoder.decode(FactsModel.self, from: jsonDD)
-                            print(decodedCountries.rows)
-                            completionHandler(true, decodedCountries)
+                            completionHandler(true, decodedCountries, nil)
                         }
                     }
                 } catch _ as NSError {
-                    completionHandler(false, nil)
+                    completionHandler(false, nil, Constants.Alert.noData)
                  }
                 })
             task.resume()
         } else {
-            completionHandler(false, nil)
+            completionHandler(false, nil, Constants.Alert.noInternet)
             print("No Internet Connection")
         }
     }

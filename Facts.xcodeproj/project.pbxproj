@@ -14,6 +14,7 @@
 		181A483A255A6CD20014CBE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A4838255A6CD20014CBE7 /* LaunchScreen.storyboard */; };
 		181A4845255A6CD30014CBE7 /* FactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A4844255A6CD30014CBE7 /* FactsTests.swift */; };
 		181A4850255A6CD30014CBE7 /* FactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A484F255A6CD30014CBE7 /* FactsUITests.swift */; };
+		18201CC52571146A002D1257 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18201CC42571146A002D1257 /* AppConstant.swift */; };
 		18355372255AE14F00C965B2 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18355371255AE14000C965B2 /* Webservice.swift */; };
 		1835537A255AE17C00C965B2 /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18355379255AE17C00C965B2 /* FactsModel.swift */; };
 		1835537F255AEB3900C965B2 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835537E255AEB3900C965B2 /* CheckInternet.swift */; };
@@ -61,6 +62,7 @@
 		181A484B255A6CD30014CBE7 /* FactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181A484F255A6CD30014CBE7 /* FactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsUITests.swift; sourceTree = "<group>"; };
 		181A4851255A6CD30014CBE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18201CC42571146A002D1257 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		18355371255AE14000C965B2 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		18355379255AE17C00C965B2 /* FactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsModel.swift; sourceTree = "<group>"; };
 		1835537E255AEB3900C965B2 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
@@ -130,12 +132,12 @@
 		181A482C255A6CCE0014CBE7 /* Facts */ = {
 			isa = PBXGroup;
 			children = (
+				18201CC62571147D002D1257 /* App&SceneDelagte */,
+				18201CC325711451002D1257 /* AppConstants */,
 				18355370255AD7C500C965B2 /* WebService */,
 				18733994255ABCCC00DB2A8E /* View */,
 				18733993255ABCC300DB2A8E /* Model */,
 				18733992255ABBFC00DB2A8E /* ViewModel */,
-				181A482D255A6CCE0014CBE7 /* AppDelegate.swift */,
-				181A482F255A6CCE0014CBE7 /* SceneDelegate.swift */,
 				181A4833255A6CD20014CBE7 /* Assets.xcassets */,
 				181A4838255A6CD20014CBE7 /* LaunchScreen.storyboard */,
 				181A483B255A6CD20014CBE7 /* Info.plist */,
@@ -169,6 +171,23 @@
 				181A4851255A6CD30014CBE7 /* Info.plist */,
 			);
 			path = FactsUITests;
+			sourceTree = "<group>";
+		};
+		18201CC325711451002D1257 /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				18201CC42571146A002D1257 /* AppConstant.swift */,
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		18201CC62571147D002D1257 /* App&SceneDelagte */ = {
+			isa = PBXGroup;
+			children = (
+				181A482D255A6CCE0014CBE7 /* AppDelegate.swift */,
+				181A482F255A6CCE0014CBE7 /* SceneDelegate.swift */,
+			);
+			path = "App&SceneDelagte";
 			sourceTree = "<group>";
 		};
 		18355370255AD7C500C965B2 /* WebService */ = {
@@ -469,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F3EE5A2565693300F4B997 /* AppDelegate.swift in Sources */,
+				18201CC52571146A002D1257 /* AppConstant.swift in Sources */,
 				1835537F255AEB3900C965B2 /* CheckInternet.swift in Sources */,
 				183C84C4256D2F7500B36139 /* UrlImageView.swift in Sources */,
 				183C84C6256D2FDE00B36139 /* UrlImageModel.swift in Sources */,
